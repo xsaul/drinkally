@@ -3,8 +3,6 @@ import DrinkPreview from '../components/DrinkPreview';
 
 const Home = () => {
 
-  const API_KEY = process.env.REACT_APP_API_KEY;
-  
 const [popular, setPopular] = useState([]);
 const [input, setInput] = useState("")
 const [results, setResults] = useState([])
@@ -15,7 +13,7 @@ const url = 'https://the-cocktail-db.p.rapidapi.com/popular.php';
 const options = {
   method: 'GET',
   headers: {
-      'X-RapidAPI-Key': API_KEY,
+      'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
       'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
   }
 };
@@ -41,7 +39,7 @@ fetchData();
 const optionsInput = {
   method: 'GET',
   headers: {
-      'X-RapidAPI-Key': API_KEY,
+      'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
       'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
   }
 };

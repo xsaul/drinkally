@@ -4,8 +4,6 @@ import DrinkRecipe from '../components/DrinkRecipe';
 
 const Recipe = () => {
 
-  const API_KEY = process.env.REACT_APP_API_KEY;
-
   const { id } = useParams();
   const [recipe, setRecipe] = useState({});
   const navigate = useNavigate();
@@ -14,7 +12,7 @@ const Recipe = () => {
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': API_KEY,
+		'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
 		'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
 	}
 };
@@ -38,7 +36,7 @@ const fetchData = () => {
   return (
     <>
     <button onClick={() => {
-      navigate("/")
+      navigate("/drinkally")
     }} className='ml-[1.2rem] bg-blue-500 hover:bg-blue-600 rounded-md px-4 py-2'>Go back home</button>
     <DrinkRecipe recipe={recipe} />
     </>
