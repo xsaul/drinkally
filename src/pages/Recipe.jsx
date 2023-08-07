@@ -3,6 +3,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import DrinkRecipe from '../components/DrinkRecipe';
 
 const Recipe = () => {
+
+  const API_KEY = process.env.REACT_APP_API_KEY;
+
   const { id } = useParams();
   const [recipe, setRecipe] = useState({});
   const navigate = useNavigate();
@@ -11,7 +14,7 @@ const Recipe = () => {
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'a9b58736a1mshd65a7ab4960c09bp1fcebfjsn9f12120c6cdc',
+		'X-RapidAPI-Key': API_KEY,
 		'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
 	}
 };
