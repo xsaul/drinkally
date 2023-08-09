@@ -37,7 +37,7 @@ const fetchData = () => {
     <>
     <button onClick={() => {
       navigate("/drinkally")
-    }} className='ml-[1.2rem] bg-blue-500 hover:bg-blue-600 rounded-md px-4 py-2'>Go back home</button>
+    }} className='ml-[1.2rem] max-[425px]:ml-[10rem] max-[375px]:ml-[8rem] max-[425px]:mt-[2rem] bg-blue-500 hover:bg-blue-600 rounded-md px-4 py-2'>Go back home</button>
     <DrinkRecipe recipe={recipe} />
     </>
   )

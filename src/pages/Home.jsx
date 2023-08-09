@@ -74,7 +74,7 @@ return (
   </form>
   </header> 
     <h1 className='border-b-[2px] border-b-blue-400 w-[13rem] text-2xl font-bold pr-[3rem] pb-[0.3rem] ml-[7rem] mb-[3rem]'>{input} drinks</h1>
-  <main className='flex flex-row flex-wrap gap-[2rem] px-[7rem] mt-[1rem] mb-[4.5rem]'>
+  <main className='flex flex-row flex-wrap gap-[2rem] max-[1024px]:gap-[1.5rem] px-[7rem] mt-[1rem] mb-[4.5rem]'>
       {
        results.length > 0 ?
        results.slice(0,8).map((result) => (
