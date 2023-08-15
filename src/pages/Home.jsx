@@ -69,8 +69,8 @@ return (
   <>
   <header className='px-[5rem] py-[1.5rem] flex justify-center items-center flex-col'>
     <form>
-      <input className='w-[25rem] rounded-md px-3 py-2'  onChange={handleInput} type="text" placeholder='Tequila, Whiskey, Vodka...' />
-      <button className='ml-5 mt-[1rem] border-blue-400 border-2 rounded-lg px-3 py-1 hover:bg-blue-400 transition duration-300' onClick={handleSubmit}>Search</button>
+      <input className='w-[25rem] max-[375px]:w-[20rem] rounded-md px-3 py-2'  onChange={handleInput} type="text" placeholder='Tequila, Whiskey, Vodka...' />
+      <button className='ml-5 max-[375px]:ml-0 mt-[1rem] border-blue-400 border-2 rounded-lg px-3 py-1 hover:bg-blue-400 transition duration-300' onClick={handleSubmit}>Search</button>
   </form>
   </header> 
     <h1 className='border-b-[2px] border-b-blue-400 w-[13rem] text-2xl font-bold pr-[3rem] pb-[0.3rem] ml-[7rem] mb-[3rem]'>{input} drinks</h1>
